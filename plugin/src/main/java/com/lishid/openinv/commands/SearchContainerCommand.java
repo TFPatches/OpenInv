@@ -72,6 +72,11 @@ public class SearchContainerCommand implements TabExecutor {
             }
         }
 
+        if (radius > 20)
+        {
+            radius = 20;
+        }
+
         Player senderPlayer = (Player) sender;
         World world = senderPlayer.getWorld();
         Chunk centerChunk = senderPlayer.getLocation().getChunk();
